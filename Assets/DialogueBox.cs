@@ -12,6 +12,7 @@ public class DialogueBox : MonoBehaviour
 {
     public TextMeshProUGUI name;
     public TextMeshProUGUI textComponent;
+
     public Person character;
     public float textSpeed;
     private int index;
@@ -20,14 +21,17 @@ public class DialogueBox : MonoBehaviour
     public void SetPerson(Person person)
     {
         character = person;
+        name.text = character.name;
+        textComponent.text = string.Empty;
+
     }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-      name.text = character.name;
-      textComponent.text = string.Empty;
+      
+      
  
     }
 
