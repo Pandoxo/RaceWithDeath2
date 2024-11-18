@@ -24,7 +24,7 @@ public class WheelTrailRendererHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(carController);
+        
         if (carController.IsTireScreeching(out float lateralVelocity, out bool isBreaking))
         {
             trailRenderer.emitting = true;
