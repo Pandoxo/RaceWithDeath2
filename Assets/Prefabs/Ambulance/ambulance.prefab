@@ -398,7 +398,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0044641495, y: 0.034991264}
+  m_Offset: {x: -0.008173466, y: 0.045122147}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -408,7 +408,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3789234, y: 2.5443287}
+  m_Size: {x: 1.2900038, y: 2.534935}
   m_EdgeRadius: 0
 --- !u!114 &1015396132405321975
 MonoBehaviour:
@@ -467,7 +467,6 @@ MonoBehaviour:
   tireScreechingAudioSource: {fileID: 1891181062132569077}
   carHitAudioSource: {fileID: 8893951476589839570}
   engineAudioSource: {fileID: 2495533638510376933}
-  sirenAudioSource: {fileID: 8656214368978028025}
 --- !u!1 &3271395573786213437
 GameObject:
   m_ObjectHideFlags: 0

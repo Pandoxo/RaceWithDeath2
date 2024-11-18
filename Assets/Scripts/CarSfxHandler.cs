@@ -32,7 +32,7 @@ public class CarSfxHandler : MonoBehaviour
         
         UpdateEngineSFX();
         UpdateTiresScreechingSFX();
-        if (carController.GetVelocityMagnitude() > 1f)
+        if (carController.GetVelocityMagnitude() > 0)
         {
             sirenAudioSource.volume = 1;
         }
