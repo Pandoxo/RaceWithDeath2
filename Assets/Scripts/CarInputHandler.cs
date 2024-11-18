@@ -22,7 +22,6 @@ public class CarInputHandler : MonoBehaviour
         if (playerController.driving)
         {
         carController.SetInputVector(movementValue.Get<Vector2>());
-        Debug.Log(movementValue.Get<Vector2>());
         }
     }
 }
