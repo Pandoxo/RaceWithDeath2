@@ -31,7 +31,7 @@ public class Person_ : MonoBehaviour
 
     public void DisplayText()
     {
-        dialogueBoxScript.SetPerson(new Sofia());
+        dialogueBoxScript.SetPerson(person);
         dialogueBoxScript.StartDialogue();
     }
 
@@ -39,6 +39,7 @@ public class Person_ : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            
             DisplayText();
             
         }

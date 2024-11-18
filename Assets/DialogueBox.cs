@@ -12,33 +12,32 @@ public class DialogueBox : MonoBehaviour
 {
     public TextMeshProUGUI name;
     public TextMeshProUGUI textComponent;
-
-    public Person character;
+    public PersonScriptableObject character;
+    Transform transform;
     public float textSpeed;
     private int index;
 
 
-    public void SetPerson(Person person)
+    public void SetPerson(PersonScriptableObject person)
     {
+        
         character = person;
-        name.text = character.name;
+        name.text = person.name;
         textComponent.text = string.Empty;
 
     }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-      
-      
- 
+        transform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && character != null)
         {
           if(textComponent.text == character.lines[index])
           {
@@ -56,6 +55,10 @@ public class DialogueBox : MonoBehaviour
     public void StartDialogue()
     {
       index = 0;
+        foreach(Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
       StartCoroutine(TypeLine());
     }
 
@@ -78,7 +81,11 @@ public class DialogueBox : MonoBehaviour
       }
       else
       {
-        gameObject.SetActive(false);
+        
+        foreach(Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
       }
     }
 

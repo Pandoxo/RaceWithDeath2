@@ -75,8 +75,9 @@ public class CarController : MonoBehaviour
     public bool IsTireScreeching(out float lateralVelocity, out bool isBraking)
     {
         lateralVelocity = GetLateralVelocity();
-        isBraking = false; 
-        if (accelerationInput < 0 && carRb.linearVelocity.magnitude > 0)
+        isBraking = false;
+        //TODO FIX LATER
+        if (accelerationInput < 0 && carRb.transform.forward.magnitude > 1f)
         {
             isBraking = true;
             return true;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cad5898f3b6b054ba586f38e5aed947, type: 3}
   m_Name: Sofia
   m_EditorClassIdentifier: 
-  Name: Sofia
+  name: Sofia
   lines:
   - '"THAT DOG HAS BITTEN ME!"'
   - '"HELP ME!!!"'
