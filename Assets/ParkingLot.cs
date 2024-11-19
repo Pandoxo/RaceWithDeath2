@@ -3,6 +3,7 @@ using UnityEngine;
 public class ParkingLot : MonoBehaviour
 {
     public Rigidbody2D targetRigidbody; // Reference to the specific Rigidbody2D to detect
+    public MainState mainState;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -13,6 +14,7 @@ public class ParkingLot : MonoBehaviour
             {
                 if (child.tag == "person")
                 {
+                    mainState.PersonSaved();
                     Destroy(child.gameObject);
                     //Do something
                 }
