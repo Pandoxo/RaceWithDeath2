@@ -9,7 +9,14 @@ public class ParkingLot : MonoBehaviour
         // Check if the collider's Rigidbody2D is the target Rigidbody2D
         if (collider.tag == "ambulance")
         {
-            Debug.Log("Player entered the trigger area.");
+            foreach (Transform child in collider.transform)
+            {
+                if (child.tag == "person")
+                {
+                    Destroy(child.gameObject);
+                    //Do something
+                }
+            }
             // Handle entry logic here, like starting an event or updating status
         }
     }

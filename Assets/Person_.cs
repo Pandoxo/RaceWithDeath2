@@ -23,6 +23,7 @@ public class Person_ : MonoBehaviour
         lines = person.lines;
         spriteRenderer = GetComponent<SpriteRenderer>();   
         spriteRenderer.sprite = sprite;
+
         dialogueBox = GameObject.FindWithTag("dialog");
         dialogueBoxScript = dialogueBox.GetComponent<DialogueBox>();
 
@@ -35,6 +36,15 @@ public class Person_ : MonoBehaviour
         dialogueBoxScript.StartDialogue();
     }
 
+    public void GrabPerson()
+    {
+
+    }
+
+    public void DropPerson()
+    {
+
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

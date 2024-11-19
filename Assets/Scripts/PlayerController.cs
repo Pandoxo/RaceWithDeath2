@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
 
     public bool driving = false;
+    bool holdingPerson = false;
     GameObject ambulance;
     GameObject cineMachineCameraObject;
     CinemachineCamera cinemachineCamera;
@@ -24,6 +25,9 @@ public class PlayerController : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
 
+    //Person
+    bool canGrab = false;
+    GameObject person;
     Vector2 lastMove;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -135,8 +139,42 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnGrab()
+    {
+        CircleCollider2D personCol;
+        personCol = person.GetComponent<CircleCollider2D>();
+        Debug.Log(canGrab, person);
+        if (canGrab)
+        {
+            
+            personCol = person.GetComponent<CircleCollider2D>();
+            personCol.enabled = false;
+            person.transform.SetParent(playerTransform);
+            person.transform.localPosition = Vector3.zero;
+            holdingPerson = true;
+        }else if(holdingPerson)
+        {
+            person.transform.SetParent(null);
+            personCol.enabled=true;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        
+        if (collision.tag == "person")
+        {
+            canGrab = true;
+            person = collision.gameObject;
+
+        }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        canGrab = false;
+    }
+
+
+
+
 }
