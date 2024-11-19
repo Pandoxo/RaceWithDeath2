@@ -14,14 +14,13 @@ public class CarController : MonoBehaviour
     float steeringInput = 0;
     float rotationAngle;
     
-    Transform transform;
     Rigidbody2D carRb;
     GameObject player;
 
     void Awake()
     {
         carRb = GetComponent<Rigidbody2D>();
-        transform = GetComponent<Transform>();
+
         rotationAngle =  transform.rotation.z;
         
         

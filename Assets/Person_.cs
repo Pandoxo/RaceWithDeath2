@@ -14,7 +14,7 @@ public class Person_ : MonoBehaviour
     GameObject dialogueBox;
     DialogueBox dialogueBoxScript;
     public bool AlreadySpoken = false;
-    public timer = person.
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
