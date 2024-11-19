@@ -13,6 +13,7 @@ public class Person_ : MonoBehaviour
     public string[] lines;
     GameObject dialogueBox;
     DialogueBox dialogueBoxScript;
+    public bool AlreadySpoken = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -49,8 +50,13 @@ public class Person_ : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if(!AlreadySpoken)
+            {
+                DisplayText();
+                AlreadySpoken = true;
+            }
+
             
-            DisplayText();
             
         }
     }

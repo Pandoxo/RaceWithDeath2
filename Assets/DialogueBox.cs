@@ -7,9 +7,9 @@ using UnityEngine;
 using TMPro;
 
 
-
 public class DialogueBox : MonoBehaviour
 {
+    
     public TextMeshProUGUI name;
     public TextMeshProUGUI textComponent;
     public PersonScriptableObject character;
@@ -21,6 +21,8 @@ public class DialogueBox : MonoBehaviour
     public void SetPerson(PersonScriptableObject person)
     {
         
+        // Start only if finished
+
         character = person;
         name.text = person.name;
         textComponent.text = string.Empty;
@@ -54,12 +56,14 @@ public class DialogueBox : MonoBehaviour
 
     public void StartDialogue()
     {
-      index = 0;
+
+        index = 0;
         foreach(Transform child in transform)
         {
             child.gameObject.SetActive(true);
         }
-      StartCoroutine(TypeLine());
+        StartCoroutine(TypeLine());
+        
     }
 
     IEnumerator TypeLine()
