@@ -14,6 +14,7 @@ public class Person_ : MonoBehaviour
     GameObject dialogueBox;
     DialogueBox dialogueBoxScript;
     public bool AlreadySpoken = false;
+    public timer = person.
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,7 +23,7 @@ public class Person_ : MonoBehaviour
         name_ = person.name;
         sprite = person.sprite;
         lines = person.lines;
-        spriteRenderer = GetComponent<SpriteRenderer>();   
+        spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite;
 
         dialogueBox = GameObject.FindWithTag("dialog");
@@ -46,6 +47,7 @@ public class Person_ : MonoBehaviour
     {
 
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -56,13 +58,13 @@ public class Person_ : MonoBehaviour
                 AlreadySpoken = true;
             }
 
-            
-            
+
+
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
