@@ -17,7 +17,7 @@ public class MainState : MonoBehaviour
 
     public bool hasWon()
     {
-        if(peopleSaved > peopleTotal - peopleDiedGameOverCondition )
+        if(getPeopleToSaveCount() <= 0 )
         {
             return true;
         }
