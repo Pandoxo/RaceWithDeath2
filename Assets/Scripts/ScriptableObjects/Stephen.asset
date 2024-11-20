@@ -10,8 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cad5898f3b6b054ba586f38e5aed947, type: 3}
-  m_Name: Steven
+  m_Name: Stephen
   m_EditorClassIdentifier: 
-  name: 
-  lines: []
+  personName: Stephen
+  lines:
+  - May I ask you something?
+  - My leg turned black...
+  - ...
+  - You think that's not good?
+  - ...
+  - Well...
+  - Maybe you're right...
+  - Let's go to the hospital...
   sprite: {fileID: -1461415947, guid: 8ee97c9674c449d45b47fc55425845ae, type: 3}
+  timeAtBegin: 120

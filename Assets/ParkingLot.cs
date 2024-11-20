@@ -14,8 +14,9 @@ public class ParkingLot : MonoBehaviour
             {
                 if (child.tag == "person")
                 {
-                    mainState.PersonSaved();
-                    Destroy(child.gameObject);
+                    Debug.Log(child.gameObject);
+                    mainState.PersonSaved(child.gameObject);
+                    
                     //Do something
                 }
             }

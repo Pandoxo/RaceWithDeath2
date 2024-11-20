@@ -7,6 +7,7 @@ TagManager:
   - ambulance
   - dialog
   - person
+  - MainState
   layers:
   - Default
   - TransparentFX

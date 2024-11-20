@@ -13,6 +13,12 @@ public class Person_ : MonoBehaviour
     public string[] lines;
     GameObject dialogueBox;
     DialogueBox dialogueBoxScript;
+    public bool hasBeenSelected = false;
+
+    GameObject mainState;
+    MainState mainStateScript;
+    float timeLeft = 0;
+
     public bool AlreadySpoken = false;
 
 
@@ -20,16 +26,22 @@ public class Person_ : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        // Get atributes of specific person
         name_ = person.name;
         sprite = person.sprite;
         lines = person.lines;
+        timeLeft = person.timeAtBegin;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite;
 
         dialogueBox = GameObject.FindWithTag("dialog");
         dialogueBoxScript = dialogueBox.GetComponent<DialogueBox>();
 
+        mainState = GameObject.FindWithTag("MainState");
+        mainStateScript = mainState.GetComponent<MainState>();
 
+        
     }
 
     public void DisplayText()
@@ -62,9 +74,18 @@ public class Person_ : MonoBehaviour
 
         }
     }
+
     // Update is called once per frame
     void Update()
     {
-
+        if(hasBeenSelected)
+        {
+        
+            timeLeft -= Time.deltaTime;
+            if(timeLeft < 0)
+            {
+                mainStateScript.PersonDied(gameObject);
+            }
+        }
     }
 }

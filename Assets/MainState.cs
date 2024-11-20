@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 
 public class MainState : MonoBehaviour
 {
@@ -8,6 +8,8 @@ public class MainState : MonoBehaviour
     private const int peopleTotal = 10;
     private const int peopleDiedGameOverCondition = 3;
     public Person_[] peopleObjects = {};
+
+   
     private Person_ currentPerson;
 
     public bool hasWon()
@@ -30,24 +32,45 @@ public class MainState : MonoBehaviour
 
     public void addAnotherPerson()
     {
+        int limit = 0;
+        // Find a new person that wasn't selected before'
+        do
+        {
+            System.Random rnd = new System.Random();
+            int randomIndex = rnd.Next(0, peopleObjects.Length);
+            currentPerson = peopleObjects[randomIndex];
+            limit++;
+        }
+        while(currentPerson.hasBeenSelected && limit < 20);
+        
+        // Select it
+        currentPerson.hasBeenSelected = true;
+        
 
+
+        currentPerson.gameObject.SetActive(true);
     }
 
-    public void PersonSaved()
+    public void PersonSaved(GameObject person)
     {
         Debug.Log(peopleSaved);
+        
         peopleSaved++;
+        Destroy(person);
+        addAnotherPerson();
     }
 
-    public void PersonDied()
+    public void PersonDied(GameObject person)
     {
         peopleDied++;
+        Destroy(person);
+        addAnotherPerson();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        addAnotherPerson();
     }
 
 
