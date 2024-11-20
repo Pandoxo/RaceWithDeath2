@@ -11,15 +11,12 @@ public class Person_ : MonoBehaviour
     Sprite sprite;
     SpriteRenderer spriteRenderer;
     public string[] lines;
-    GameObject dialogueBox;
-    DialogueBox dialogueBoxScript;
+    
     public bool hasBeenSelected = false;
 
-    GameObject mainState;
+    
+    DialogueBox dialogueBoxScript;    
     MainState mainStateScript;
-
-
-    GameObject timer;
     TimerScript timerScript;
     public float timeLeft = 0;
 
@@ -35,17 +32,21 @@ public class Person_ : MonoBehaviour
         sprite = person.sprite;
         lines = person.lines;
         timeLeft = person.timeAtBegin;
-
+        
+        // Sprite renderer
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite;
-
-        dialogueBox = GameObject.FindWithTag("dialog");
+        
+        // Load dialogue element
+        GameObject dialogueBox = GameObject.FindWithTag("dialog");
         dialogueBoxScript = dialogueBox.GetComponent<DialogueBox>();
-
-        mainState = GameObject.FindWithTag("MainState");
+        
+        // Load main state element
+        GameObject mainState = GameObject.FindWithTag("MainState");
         mainStateScript = mainState.GetComponent<MainState>();
-
-        timer = GameObject.FindWithTag("Timer");
+        
+        // Load timer element
+        GameObject timer = GameObject.FindWithTag("Timer");
         timerScript = timer.GetComponent<TimerScript>();
 
 

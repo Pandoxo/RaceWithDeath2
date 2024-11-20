@@ -8,6 +8,7 @@ TagManager:
   - dialog
   - person
   - MainState
+  - Timer
   layers:
   - Default
   - TransparentFX
