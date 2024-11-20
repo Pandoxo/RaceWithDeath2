@@ -5,7 +5,7 @@ public class MainMenuButtonScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    public void Play()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("SampleScene");
         PauseMenu.GameIsPaused = false;
         Time.timeScale = 1f;
     }
