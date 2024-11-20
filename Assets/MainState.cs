@@ -69,6 +69,11 @@ public class MainState : MonoBehaviour
         addAnotherPerson();
     }
 
+    public int getPeopleToSaveCount()
+    {
+        return peopleTotal - peopleDiedGameOverCondition - peopleSaved;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
