@@ -17,6 +17,10 @@ public class Person_ : MonoBehaviour
 
     GameObject mainState;
     MainState mainStateScript;
+
+
+    GameObject timer;
+    TimerScript timerScript;
     public float timeLeft = 0;
 
     public bool AlreadySpoken = false;
@@ -40,6 +44,9 @@ public class Person_ : MonoBehaviour
 
         mainState = GameObject.FindWithTag("MainState");
         mainStateScript = mainState.GetComponent<MainState>();
+
+        timer = GameObject.FindWithTag("Timer");
+        timerScript = timer.GetComponent<TimerScript>();
 
 
     }
@@ -80,8 +87,10 @@ public class Person_ : MonoBehaviour
     {
         if(hasBeenSelected)
         {
-
+            // Update the time to die   
             timeLeft -= Time.deltaTime;
+            timerScript.timeLeft = timeLeft;
+
             if(timeLeft < 0)
             {
                 mainStateScript.PersonDied(gameObject);
