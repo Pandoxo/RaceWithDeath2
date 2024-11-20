@@ -6,6 +6,8 @@ public class MainMenuButtonScript : MonoBehaviour
    public void Play()
     {
         SceneManager.LoadScene("Level1");
+        PauseMenu.GameIsPaused = false;
+        Time.timeScale = 1f;
     }
     public void Quit()
     {
