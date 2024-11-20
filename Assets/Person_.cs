@@ -7,7 +7,7 @@ public class Person_ : MonoBehaviour
 {
     public PersonScriptableObject person;
 
-    string name_;
+    public string name_;
     Sprite sprite;
     SpriteRenderer spriteRenderer;
     public string[] lines;

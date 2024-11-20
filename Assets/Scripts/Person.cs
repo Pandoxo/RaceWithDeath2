@@ -88,10 +88,10 @@ class Amy : Person
     public Amy()
     {
         string[] tempLines = {
-        "I STABBED HIM!!!",
+        "HE STABBED ME!!!",
         "IT WAS AN ACCIDENT!",
         "PLEASE!!!",
-        "SAVE MY HUSBAND!"};
+        "SAVE MEEEE!"};
 
 
         this.lines = tempLines;
@@ -105,7 +105,7 @@ class Mahmed : Person
     public Mahmed()
     {
         string[] tempLines = {
-        "I drunk this thing, and I feel weird...",
+        "I drank this thing, and I feel weird...",
         "very weird...",
         "Could you help me?",
         "please?"};

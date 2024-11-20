@@ -45,6 +45,7 @@ public class MainState : MonoBehaviour
         
         // Select it
         currentPerson.hasBeenSelected = true;
+        Debug.Log(currentPerson.name_);
         
 
 

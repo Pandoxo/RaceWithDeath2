@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cad5898f3b6b054ba586f38e5aed947, type: 3}
+  m_Name: Kate
+  m_EditorClassIdentifier: 
+  personName: Kate
+  lines:
+  - AHHHHHHH!!!
+  - MY FOOT!!!
+  - HELP MEEEEE!!! AHHHHHHHHHHHHH!
+  - PLEASE!
+  - TAKE ME TO THE HOSPITAL!
+  - '*screaming* AHHHHHHHHHHHHHHHHHHHH!'
+  sprite: {fileID: -4136700708010962521, guid: 06398e191d398cb4e91eac5163b6b4af, type: 3}
+  timeAtBegin: 160

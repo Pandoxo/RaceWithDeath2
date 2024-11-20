@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252626dd74077ef4b944041fb7085492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 11400000, guid: 1e64f573d0686954388bb0370751c272, type: 2}
+  person: {fileID: 11400000, guid: f57f57dde2b77df4ca4956b34ccbabcc, type: 2}
+  name_: 
   lines: []
+  hasBeenSelected: 0
+  AlreadySpoken: 0
 --- !u!212 &4741652656164922415
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92,7 +95,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1399672885, guid: 8ee97c9674c449d45b47fc55425845ae, type: 3}
+  m_Sprite: {fileID: 1989021479, guid: 8ee97c9674c449d45b47fc55425845ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
