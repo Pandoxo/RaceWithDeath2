@@ -8,7 +8,7 @@ public class ParkingLot : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         // Check if the collider's Rigidbody2D is the target Rigidbody2D
-        if (collider.tag == "ambulance")
+        if (collider.tag == "ambulance" || collider.tag == "Player")
         {
             foreach (Transform child in collider.transform)
             {
