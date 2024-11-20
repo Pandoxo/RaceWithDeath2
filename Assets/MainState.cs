@@ -9,7 +9,7 @@ public class MainState : MonoBehaviour
     private const int peopleDiedGameOverCondition = 3;
     public Person_[] peopleObjects = {};
 
-   
+
     private Person_ currentPerson;
 
     public bool hasWon()
@@ -42,20 +42,21 @@ public class MainState : MonoBehaviour
             limit++;
         }
         while(currentPerson.hasBeenSelected && limit < 20);
-        
+
         // Select it
         currentPerson.hasBeenSelected = true;
         Debug.Log(currentPerson.name_);
-        
+
 
 
         currentPerson.gameObject.SetActive(true);
+        Debug.Log(currentPerson.name_);
     }
 
     public void PersonSaved(GameObject person)
     {
         Debug.Log(peopleSaved);
-        
+
         peopleSaved++;
         Destroy(person);
         addAnotherPerson();
