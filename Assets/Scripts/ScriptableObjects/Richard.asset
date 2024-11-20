@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personName: Richard
   lines:
-  - PLEASE HELP MY MOTHER!
-  - SHE IS LAYING LIKE THAT FOR FEW HOURS!
-  - TAKE HER TO THE HOSPITAL!
-  - I BEG YOU!!!
+  - PLEASE HELP ME!
+  - MY ARM FELL OFF
+  - PLEASE FIX IT!!
+  - IT HUUUURTS SOOOOO MUUUUCH!!
+  - AHHHHHHHHHHHHH!!!
   sprite: {fileID: -1625796291, guid: 60138dc4f35b0784a9763483d85237a8, type: 3}
   timeAtBegin: 80

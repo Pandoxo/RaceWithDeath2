@@ -19,4 +19,4 @@ MonoBehaviour:
   - Could you help me?
   - please?
   sprite: {fileID: -1869162751, guid: 60138dc4f35b0784a9763483d85237a8, type: 3}
-  timeAtBegin: 70
+  timeAtBegin: 60
