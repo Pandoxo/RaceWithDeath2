@@ -18,5 +18,5 @@ MonoBehaviour:
   - Can you save me?
   - I jumped from the window...
   - Please... Help me...
-  sprite: {fileID: 5288949238422427141, guid: daa1faa953ce5b24b988b6d3a0556989, type: 3}
+  sprite: {fileID: -453982057, guid: 60138dc4f35b0784a9763483d85237a8, type: 3}
   timeAtBegin: 140

@@ -17,7 +17,7 @@ public class Person_ : MonoBehaviour
 
     GameObject mainState;
     MainState mainStateScript;
-    float timeLeft = 0;
+    public float timeLeft = 0;
 
     public bool AlreadySpoken = false;
 
@@ -41,7 +41,7 @@ public class Person_ : MonoBehaviour
         mainState = GameObject.FindWithTag("MainState");
         mainStateScript = mainState.GetComponent<MainState>();
 
-        
+
     }
 
     public void DisplayText()
@@ -80,7 +80,7 @@ public class Person_ : MonoBehaviour
     {
         if(hasBeenSelected)
         {
-        
+
             timeLeft -= Time.deltaTime;
             if(timeLeft < 0)
             {

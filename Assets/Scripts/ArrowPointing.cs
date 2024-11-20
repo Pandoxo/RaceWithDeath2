@@ -16,7 +16,8 @@ public class ArrowPointing : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 pointDir =  Vector3.zero -player.transform.position;
+        // - new Vector3(0f, 7.2f, 0f) because we account for the fact that the arrow is int the upper section of the screen
+        Vector2 pointDir =  GameObject.FindGameObjectWithTag("person").transform.position - new Vector3(0f, 7.2f, 0f) - player.transform.position;
         float angle = Mathf.Atan2(pointDir.y,pointDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
     }

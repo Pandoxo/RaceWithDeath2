@@ -18,5 +18,5 @@ MonoBehaviour:
   - Can you put my finger where it should be?
   - ...
   - Please?
-  sprite: {fileID: 7827470447151488021, guid: 47056d89546d20c4db9273cd5e1dea4d, type: 3}
+  sprite: {fileID: 876850048, guid: 60138dc4f35b0784a9763483d85237a8, type: 3}
   timeAtBegin: 80
