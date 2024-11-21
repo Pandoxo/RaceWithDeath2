@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CarSfxHandler : MonoBehaviour
@@ -9,6 +10,7 @@ public class CarSfxHandler : MonoBehaviour
     public AudioSource sirenAudioSource;
     float desiredEnginePitch = 0.5f;
     float tireScreechPitch = 0.5f;
+    
 
     CarController carController;
 
@@ -32,7 +34,7 @@ public class CarSfxHandler : MonoBehaviour
         
         UpdateEngineSFX();
         UpdateTiresScreechingSFX();
-        if (carController.GetVelocityMagnitude() > 0)
+        if (carController.GetVelocityMagnitude() > 1f || carController.accelerationInput != 0) 
         {
             sirenAudioSource.volume = 1;
         }

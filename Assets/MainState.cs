@@ -6,15 +6,17 @@ public class MainState : MonoBehaviour
     public int peopleSaved = 0;
     public int peopleDied = 0;
     private const int peopleTotal = 10;
-    private const int peopleDiedGameOverCondition = 3;
+    private const int peopleDiedGameOverCondition = 1;
     public Person_[] peopleObjects = {};
+    public GameObject YouLostScreen;
+    public GameObject YouWinScreen;
 
 
     private Person_ currentPerson;
 
     public bool hasWon()
     {
-        if(peopleSaved > peopleTotal - peopleDiedGameOverCondition )
+        if(getPeopleToSaveCount() <= 0 )
         {
             return true;
         }
@@ -59,19 +61,38 @@ public class MainState : MonoBehaviour
 
         peopleSaved++;
         Destroy(person);
+        if (hasWon())
+        {
+            DispalyWinScreen();
+        }
         addAnotherPerson();
+        
     }
 
     public void PersonDied(GameObject person)
     {
         peopleDied++;
         Destroy(person);
+        if (hasLost())
+        {
+            DispalyLooseScreen();
+        }
         addAnotherPerson();
+
     }
 
     public int getPeopleToSaveCount()
     {
         return peopleTotal - peopleDiedGameOverCondition - peopleSaved;
+    }
+
+    void DispalyWinScreen()
+    {
+        YouWinScreen.SetActive(true);
+    }
+    void DispalyLooseScreen()
+    {
+        YouLostScreen.SetActive(true);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -87,15 +108,15 @@ public class MainState : MonoBehaviour
     void Update()
     {
 
-        if(hasWon())
-        {
-            // We win
+        // if(hasWon())
+        // {
+        //     // We win
 
-        }
-        else if(hasLost())
-        {
-            // We loose
-        }
+        // }
+        // else if(hasLost())
+        // {
+        //     // We loose
+        // }
 
 
     }

@@ -8,7 +8,7 @@ public class CarController : MonoBehaviour
     public float accelerationFactor = 30.0f;
     public float turnFactor = 3.5f;
 
-    private float accelerationInput = 0;
+    public float accelerationInput = 0;
     private float steeringInput = 0;
     private float rotationAngle;
     private bool isReversing = false;
