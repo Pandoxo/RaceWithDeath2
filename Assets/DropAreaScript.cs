@@ -13,7 +13,7 @@ public class DropAreaScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.tag);
-        if (collision.gameObject.tag == "person" && ambulanceRb.linearVelocity.magnitude < 1f)
+        if (collision.gameObject.tag == "person" && collision.gameObject.transform.parent.tag != "Player" && ambulanceRb.linearVelocity.magnitude < 1f)
         {
             person = collision.gameObject;
             //sets person parent to ambulance

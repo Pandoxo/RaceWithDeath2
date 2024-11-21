@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEditor.SceneManagement;
 using System;
 
 public class MainState : MonoBehaviour
@@ -7,7 +6,7 @@ public class MainState : MonoBehaviour
     public int peopleSaved = 0;
     public int peopleDied = 0;
     private const int peopleTotal = 10;
-    private const int peopleDiedGameOverCondition = 3;
+    private const int peopleDiedGameOverCondition = 1;
     public Person_[] peopleObjects = {};
     public GameObject YouLostScreen;
     public GameObject YouWinScreen;
